@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste des Quêtes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            padding: 30px;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            color: #fff;
+            font-family: 'Press Start 2P', cursive;
+            margin-bottom: 40px;
+            text-shadow: 3px 3px 0 rgba(0,0,0,0.2);
+            font-size: 2.5em;
+        }
+
+        .grille {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .quete {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .quete:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+        }
+
+        .quete.premium {
+            border: 3px solid #ffd700;
+            background: linear-gradient(to bottom right, #fffdf0, #ffe08c);
+        }
+
+        .premium-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #ffd700;
+            color: #8B4513;
+            padding: 5px 12px;
+            font-size: 0.8em;
+            font-weight: bold;
+            border-radius: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .code {
+            font-weight: 700;
+            font-size: 1.2em;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            background-color: #f0f0f0;
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        .quete.premium .code {
+            color: #8B4513;
+            background-color: #ffecb3;
+        }
+
+        .description {
+            font-size: 1.1em;
+            color: #555;
+            flex-grow: 1;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .grille {
+                grid-template-columns: 1fr;
+            }
+            h1 {
+                font-size: 2em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 15px;
+            }
+            h1 {
+                font-size: 1.5em;
+            }
+            .quete {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>📜 Liste des Quêtes</h1>
+
+    <div class="grille">
+        <div class="quete premium">
+            <div class="premium-badge">Premium</div>
+            <div class="code">$QTE-001</div>
+            <div class="description">Accéder au temple interdit des anciens dieux.</div>
+        </div>
+
+        <div class="quete">
+            <div class="code">QTE-002</div>
+            <div class="description">Repousser les gobelins de Brumecendre.</div>
+        </div>
+
+        <div class="quete">
+            <div class="code">QTE-003</div>
+            <div class="description">Collecter 10 cristaux dans les cavernes.</div>
+        </div>
+
+        <div class="quete premium">
+            <div class="premium-badge">Premium</div>
+            <div class="code">$QTE-004</div>
+            <div class="description">Infiltrer la forteresse des ombres sans être vu.</div>
+        </div>
+
+        <div class="quete">
+            <div class="code">QTE-005</div>
+            <div class="description">Éteindre les feux magiques dans le sanctuaire.</div>
+        </div>
+
+        <div class="quete premium">
+            <div class="premium-badge">Premium</div>
+            <div class="code">$QTE-006</div>
+            <div class="description">Dominer un dragon légendaire et le chevaucher.</div>
+        </div>
+    </div>
+
+</body>
+</html>
